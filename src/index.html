@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>React Webpack Template Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  </head>
+  <body>
+    <div id="player"></div>
+
+    <script>
+      __REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__
+    </script>
+    <script src="http://cdn.vidible.tv/stage/player/js/latest/vidible-min.js"></script>
+    <script type="text/javascript" src="/assets/app.js"></script>
+    <script type="text/javascript">
+      vidible.player('player').setup({
+        pid: '57b5e2b29776926ba2176968',
+        bid: '5799ed4797769228fb335f23',
+        videos: '57b5dd8c5ae7a414fb8f78ea',
+        bcid: '50d595ec0364e95588c77bd2',
+        'm.playertype': 'html',
+        //'m.isResponsive': true,
+        'm.playback': 'click',
+        'm.sound': 'mute',
+        'm.initialVolume': 0.5,
+        extensions: [
+          {
+            name: 'videoPauseIcon',
+            config: {
+            }
+          }
+        ]
+      }).load();
+    </script>
+  </body>
+</html>
