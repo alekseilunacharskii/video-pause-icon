@@ -5,6 +5,7 @@
   top: 0;
   left: 0;
   z-index: 6;
+  pointer-events: none;
 }
 
 .video-pause-icon .icon-container {
@@ -18,4 +19,5 @@
   right: 5px;
   bottom: 5px;
   color: #fff;
+  pointer-events: visible;
 }

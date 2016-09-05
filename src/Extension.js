@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import co from 'co'
-import Container from './components/container'
-import css from './styles/App.css'
+import Container from './components/Container'
+import css from './styles/main.css'
 import utils from './utils'
 
 class Extension {
@@ -18,18 +18,6 @@ class Extension {
     co(this.createView.bind(this))
   }
 
-  hide() {
-
-  }
-
-  show() {
-
-  }
-
-  load() {
-
-  }
-
   destroy() {
     utils.removeElem(this._styles)
   }
@@ -37,13 +25,15 @@ class Extension {
   * createView() {
     try {
       const container = yield this.view.getContainer(this.view.PLAYER_CONTAINER)
-      const target = document.createElement('div')
-      target.className = 'video-pause-icon'
-
+      const document = container.ownerDocument
+      const dest = document.createElement('div')
       this._styles = utils.addCss(container, css)
-      const src = 'http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/sign-check-icon.png'
-      ReactDOM.render(<Container src={src}/>, target)
-      container.appendChild(target)
+      //const src = 'http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/sign-check-icon.png'
+      ReactDOM.render(<Container
+        yOffset={this.config.yOffset}
+        xOffset={this.config.xOffset}
+      />, dest)
+      container.appendChild(dest.firstChild)
     }
     catch (error) {
       window.console.error(error)
@@ -52,9 +42,7 @@ class Extension {
 
   get api() {
     return {
-      hide: this.hide.bind(this),
-      show: this.show.bind(this),
-      load: this.load.bind(this),
+      destroy: this.destroy.bind(this),
     }
   }
 }
