@@ -6,7 +6,7 @@ class Container extends React.Component {
     return (
       <div className="video-pause-icon">
         <div className="container">
-          <IconView config={this.props.config}/>
+          <IconView context={this.props.context}/>
         </div>
       </div>
     )

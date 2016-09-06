@@ -28,7 +28,7 @@ class Extension {
       const document = container.ownerDocument
       const dest = document.createElement('div')
       this._styles = utils.addCss(container, css)
-      ReactDOM.render(<Container config={this.config}><div>some</div></Container>, dest)
+      ReactDOM.render(<Container context={this}><div>some</div></Container>, dest)
       container.appendChild(dest.firstChild)
     }
     catch (error) {
