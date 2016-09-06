@@ -2,20 +2,17 @@ import React from 'react'
 
 class IconView extends React.Component {
   render() {
+    const config = this.props.config
     const styles = {
-      bottom: this.props.yOffset,
-      right: this.props.xOffset,
+      bottom: config.yOffset,
+      right: config.xOffset,
+      width: config.width,
+      height: config.width,
     }
     return (
-      <div className="notice" style={styles}>
-      Here be dragons!</div>
+      <img className="image" src={config.src} style={styles}/>
     )
   }
-}
-
-IconView.defaultProps = {
-  xOffset: '0px',
-  yOffset: '0px',
 }
 
 export default IconView

@@ -14,10 +14,10 @@
   height: 100%;
 }
 
-.video-pause-icon .notice {
+.video-pause-icon .image {
   position: absolute;
-  right: 5px;
-  bottom: 5px;
+  right: 0px;
+  bottom: 0px;
   color: #fff;
   pointer-events: visible;
 }

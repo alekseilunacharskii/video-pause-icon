@@ -28,11 +28,7 @@ class Extension {
       const document = container.ownerDocument
       const dest = document.createElement('div')
       this._styles = utils.addCss(container, css)
-      //const src = 'http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/sign-check-icon.png'
-      ReactDOM.render(<Container
-        yOffset={this.config.yOffset}
-        xOffset={this.config.xOffset}
-      />, dest)
+      ReactDOM.render(<Container config={this.config}><div>some</div></Container>, dest)
       container.appendChild(dest.firstChild)
     }
     catch (error) {

@@ -6,7 +6,7 @@ class Container extends React.Component {
     return (
       <div className="video-pause-icon">
         <div className="container">
-          <IconView yOffset={this.props.yOffset} xOffset={this.props.xOffset}/>
+          <IconView config={this.props.config}/>
         </div>
       </div>
     )
