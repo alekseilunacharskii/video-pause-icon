@@ -10,11 +10,7 @@
   <body>
     <div id="player"></div>
 
-    <script>
-      __REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__
-    </script>
     <script src="http://cdn.vidible.tv/stage/player/js/latest/vidible-min.js"></script>
-    <script type="text/javascript" src="assets/app.js"></script>
     <script type="text/javascript">
       vidible.player('player').setup({
         pid: '57b5e2b29776926ba2176968',
@@ -29,8 +25,9 @@
         extensions: [
           {
             name: 'videoPauseIcon',
+            url: 'video-pause-icon.js',
             config: {
-              yOffset: 50,
+             yOffset: 50,
               xOffset: 10,
               src: 'http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/sign-check-icon.png',
               href: 'http://vidible.tv',
